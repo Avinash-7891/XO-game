@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #eef3f1;
+    text-align: center;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #da9305;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    background-color: #dfc796;
+    font-size: 8vmin;
+    font-weight: 700;
+    color: #bb1212;
+    transition :all 0.1s ease-in 0.1s;
+}
+.box:hover{
+    height : 19.5vmin;
+    width : 19.5vmin;
+    font-size: auto;
+    
+}
+.box:active{
+    color: #eaf0e4;
+}
+#reset-btn{
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    background-color: orange;
+    color: rgb(15, 6, 15);
+    font-weight: 700;
+    transition :all 0s ease-in 0s;
+}
+#reset-btn:hover{
+    opacity: 0.7;
+}
+
+#msg{
+    font-size: 7vmin;
+    font-weight: 540;
+    color: #4505e7e6;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.msg-container{
+    height: 20vmin;
+}
+#new-btn{
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    background-color: rgb(6, 5, 5);
+    color: #eaf0e4;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 01);
+    transition :all 0s ease-in 0s;
+}
+#new-btn:hover{
+    opacity: 0.8;
+}
+.hide{
+    display: none;
+}
