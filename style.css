@@ -1,18 +1,36 @@
-*{
-    margin:0;
-    padding:0;
+:root {
+    --background-color: #eef3f1;
+    --box-background-color: #dfc796;
+    --border-color: #da9305;
+    --x-color: #bb1212;
+    --message-color: #4505e7e6;
+    --button-text-color: #eaf0e4;
 }
-body{
-    background-color: #eef3f1;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
     text-align: center;
 }
-.container{
+
+h1 {
+    margin-top: 29px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.container {
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.game{
+
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -21,68 +39,71 @@ body{
     align-items: center;
     gap: 1.5vmin;
 }
-.box{
+
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 10px;
     border-style: solid;
-    border-color: #da9305;
+    border-color: var(--border-color);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    background-color: #dfc796;
+    background-color: var(--box-background-color);
     font-size: 8vmin;
     font-weight: 700;
-    color: #bb1212;
-    transition :all 0.1s ease-in 0.1s;
+    color: var(--x-color);
+    transition: all 0.1s ease-in 0.1s;
 }
-.box:hover{
-    height : 19.5vmin;
-    width : 19.5vmin;
+
+.box:hover {
+    height: 19.5vmin;
+    width: 19.5vmin;
     font-size: auto;
-    
 }
-.box:active{
-    color: #eaf0e4;
+
+.box:active {
+    color: var(--button-text-color);
 }
-#reset-btn{
+
+#reset-btn {
     padding: 1rem;
     border-radius: 10px;
     font-size: 1.25rem;
     background-color: orange;
     color: rgb(15, 6, 15);
     font-weight: 700;
-    transition :all 0s ease-in 0s;
+    transition: all 0s ease-in 0s;
 }
-#reset-btn:hover{
+
+#reset-btn:hover {
     opacity: 0.7;
 }
 
-#msg{
+#msg {
     font-size: 7vmin;
     font-weight: 540;
-    color: #4505e7e6;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--message-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.msg-container{
+
+.msg-container {
     height: 20vmin;
 }
-#new-btn{
+
+#new-btn {
     padding: 1rem;
     border-radius: 10px;
     font-size: 1.25rem;
     background-color: rgb(6, 5, 5);
-    color: #eaf0e4;
+    color: var(--button-text-color);
     border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 01);
-    transition :all 0s ease-in 0s;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: all 0s ease-in 0s;
 }
-#new-btn:hover{
+
+#new-btn:hover {
     opacity: 0.8;
 }
-.hide{
+
+.hide {
     display: none;
-}
-h1{
-    margin-top: 29px;
-    font-style: italic;
-    text-decoration: underline;
 }
