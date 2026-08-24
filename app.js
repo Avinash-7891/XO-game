@@ -93,6 +93,3 @@ const showDraw = () => {
 };
 newGameBtn.addEventListener("click",resetGame);
 resetBtn.addEventListener("click",resetGame);
-
-
-//atif aslam
