@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+
 let turnX = true;
 let fordr = 0;
 let count = 0;
@@ -34,7 +35,10 @@ const makeMove = (box) => {
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         makeMove(box);
-        checkWinner();
+
+        if (!checkWinner()) {
+            checkDraw();
+        }
     });
 });
 
@@ -60,18 +64,21 @@ const showWinner = (winner) => {
 
 const checkWinner = () => {
     for (let pattern of winPatterns) {
-        let pos1Val = boxes[pattern[0]].innerText;
-        let pos2Val = boxes[pattern[1]].innerText;
-        let pos3Val = boxes[pattern[2]].innerText;
+        const pos1Val = boxes[pattern[0]].innerText;
+        const pos2Val = boxes[pattern[1]].innerText;
+        const pos3Val = boxes[pattern[2]].innerText;
 
-        if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-            if (pos1Val === pos2Val && pos2Val === pos3Val) {
-                showWinner(pos1Val);
-            }
+        if (
+            pos1Val !== "" &&
+            pos1Val === pos2Val &&
+            pos2Val === pos3Val
+        ) {
+            showWinner(pos1Val);
+            return true;
         }
     }
 
-    checkDraw();
+    return false;
 };
 
 const resetGame = () => {
