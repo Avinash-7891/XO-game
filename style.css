@@ -33,8 +33,8 @@ h1 {
 .game {
     height: 60vmin;
     width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
