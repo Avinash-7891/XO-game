@@ -35,8 +35,6 @@ h1 {
     width: 60vmin;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
     gap: 1.5vmin;
 }
 
@@ -51,14 +49,12 @@ h1 {
     font-size: 8vmin;
     font-weight: 700;
     color: var(--x-color);
-    transition: all 0.1s ease-in 0.1s;
     cursor: pointer;
+    transition: transform 0.15s ease;
 }
 
 .box:hover {
-    height: 19.5vmin;
-    width: 19.5vmin;
-    font-size: auto;
+    transform: scale(1.05);
 }
 
 .box:active {
