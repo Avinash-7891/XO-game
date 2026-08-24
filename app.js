@@ -28,7 +28,7 @@ const makeMove = (box) => {
     }
 
     box.disabled = true;
-    count = count + 1;
+    count++;
 };
 
 boxes.forEach((box) => {
