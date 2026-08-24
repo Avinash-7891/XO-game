@@ -83,4 +83,6 @@ body{
 }
 h1{
     margin-top: 29px;
+    font-style: italic;
+    text-decoration: underline;
 }
